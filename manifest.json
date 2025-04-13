@@ -1,0 +1,19 @@
+
+{
+  "manifest_version": 3,
+  "name": "Baekjoon Re-Solver",
+  "version": "1.1",
+  "description": "백준 문제를 다시 풀 수 있도록 저장하는 도우미",
+  "permissions": ["storage", "scripting", "tabs"],
+  "host_permissions": ["https://www.acmicpc.net/problem/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.acmicpc.net/problem/*"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ]
+}
